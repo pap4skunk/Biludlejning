@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="da" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>K.W.BRUUN - Login</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+
+<header>
+  <div class="logo">K.W.BRUUN</div>
+
+  <nav>
+    <a href="index.html">Forside</a>
+    <a href="BilBibliotek.html">Biler</a>
+    <a href="faq.html">FAQ</a>
+    <a href="om%20os.html">Om os</a>
+  </nav>
+
+  <div class="right-section">
+    <input type="text" placeholder="Søg..." class="search-box">
+    <a href="login.html">
+      <button class="login-btn">Login</button>
+    </a>
+  </div>
+</header>
+
+<!-- HEADER -->
+<div th:replace="fragments/header :: header"></div>
+
+<!-- LOGIN -->
+<div class="login-container">
+  <div class="login-box">
+    <h2>Login</h2>
+
+    <form th:action="@{/login}" method="post">
+      <input type="text" name="username" placeholder="Brugernavn" required>
+      <input type="password" name="password" placeholder="Adgangskode" required>
+
+      <button type="submit">Log ind</button>
+    </form>
+
+    <a href="#">Glemt adgangskode?</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+
+
+</body>
+</html>

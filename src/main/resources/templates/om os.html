@@ -1,10 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>K.W.BRUUN - Om os</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
+<header>
+    <div class="logo">K.W.BRUUN</div>
+
+    <nav>
+        <a href="index.html">Forside</a>
+        <a href="BilBibliotek.html">Biler</a>
+        <a href="faq.html">FAQ</a>
+        <a href="om%20os.html">Om os</a>
+    </nav>
+
+    <div class="right-section">
+        <input type="text" placeholder="Søg..." class="search-box">
+        <a href="login.html">
+            <button class="login-btn">Login</button>
+        </a>
+    </div>
+</header>
+
+<!-- HEADER -->
+<div th:replace="fragments/header :: header"></div>
+
+<!-- OM OS -->
+<section>
+    <h1>Om Bilabonnement</h1>
+
+    <p>
+        Bilabonnement er en del af K.W. Bruun & Co. og specialiserer sig i fleksible løsninger
+        inden for biludlejning på abonnement. Vores mission er at gøre det nemt og overskueligt
+        for kunder at få adgang til en bil uden de traditionelle forpligtelser, der følger med køb
+        eller leasing.
+    </p>
+
+    <p>
+        Vi tilbyder både kortere og længere abonnementsperioder, som spænder fra 120 dage til
+        op til 36 måneder. Vores udvalg af biler opdateres løbende, så kunder altid har adgang
+        til moderne og attraktive køretøjer.
+    </p>
+</section>
+
+<!-- VORES SYSTEM -->
+<section>
+    <h2>Vores digitale løsning</h2>
+
+    <p>
+        I takt med virksomhedens vækst er behovet for et mere effektivt internt system blevet
+        tydeligt. Tidligere blev mange af vores administrative processer håndteret i Excel,
+        hvilket medførte risiko for fejl og manglende overblik.
+    </p>
+
+    <p>
+        Derfor arbejder vi nu med udviklingen af et moderne IT-system, som understøtter hele
+        bilens livscyklus – fra udlejning til tilbagelevering, skadesregistrering og videresalg.
+    </p>
+
+    <p>
+        Systemet er designet som et flerbrugersystem, hvor flere medarbejdere kan arbejde
+        samtidigt med dataregistrering, skadehåndtering og forretningsanalyse.
+    </p>
+</section>
+
+<!-- BRUGERTYPER -->
+<section>
+    <h2>Brugere af systemet</h2>
+
+    <div class="cars">
+
+        <div class="car-card">
+            <h3>Dataregistrering</h3>
+            <p>
+                Medarbejdere der registrerer nye lejeaftaler, kundedata og oplysninger om biler.
+            </p>
+        </div>
+
+        <div class="car-card">
+            <h3>Skade & Udbedring</h3>
+            <p>
+                Ansvarlige for at registrere fejl og mangler på biler efter endt lejeperiode samt
+                beregne omkostninger ved reparationer.
+            </p>
+        </div>
+
+        <div class="car-card">
+            <h3>Forretningsudvikling</h3>
+            <p>
+                Brugere der analyserer data og overvåger virksomhedens performance gennem
+                rapporter og KPI’er.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- VORES MÅL -->
+<section>
+    <h2>Vores mål</h2>
+
+    <p>
+        Målet med systemet er at skabe et samlet overblik over bilernes rejse gennem hele
+        processen. Dette inkluderer:
+    </p>
+
+    <ul>
+        <li>Registrering af lejeaftaler</li>
+        <li>Overblik over udlejede og tilgængelige biler</li>
+        <li>Håndtering af skader og omkostninger</li>
+        <li>Rapportering af nøgletal (KPI’er)</li>
+    </ul>
+
+    <p>
+        Ved at digitalisere disse processer kan vi reducere fejl, spare tid og forbedre
+        beslutningsgrundlaget for virksomheden.
+    </p>
+</section>
+
+<!-- AFSLUTNING -->
+<section>
+    <h2>Fremtiden</h2>
+
+    <p>
+        I fremtiden ønsker vi at udvide systemet med yderligere funktioner såsom automatiske
+        alarmer, lagerstyring og bedre integration med eksterne samarbejdspartnere som FDM
+        og transportører.
+    </p>
+
+    <p>
+        Vores ambition er at skabe en komplet digital løsning, der understøtter både kundens
+        og bilens rejse – fra første booking til endelig levering.
+    </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 K.W.BRUUN</p>
+</footer>
 
 </body>
 </html>
