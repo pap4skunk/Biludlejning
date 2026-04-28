@@ -2,83 +2,218 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>K.W.BRUUN - Forside</title>
     <link rel="stylesheet" href="/static/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bilabonnement Admin Dashboard</title>
+
 
 
 </head>
 
 <body>
 
-
-<!-- HEADER -->
 <header>
-    <div class="logo">K.W.BRUUN</div>
+
+    <h1>Bilabonnement.dk - Admin Dashboard</h1>
 
     <nav>
-        <a href="index.html">Forside</a>
-        <a href="BilBibliotek.html">Biler</a>
-        <a href="faq.html">FAQ</a>
-        <a href="om%20os.html">Om os</a>
+        <a href="index.html">Dashboard</a>
+        <a href="dataregistrering.html">Dataregistrering</a>
+        <a href="skader.html">Skader</a>
+        <a href="rapporter.html">Rapporter</a>
+        <a href="#">Biler</a>
     </nav>
 
-    <div class="right-section">
-        <input type="text" placeholder="Søg..." class="search-box">
-        <a href="login.html">
-            <button class="login-btn">Login</button>
-        </a>
-    </div>
 </header>
 
-<!-- OM OS PREVIEW -->
-<section>
-    <h2>Om os</h2>
-    <p>
-        Hos K.W.BRUUN tilbyder vi fleksible bilabonnementer, så du nemt kan få adgang til din drømmebil uden besvær.
-    </p>
-    <a href="om%20os.html" class="btn">Læs mere</a>
-</section>
+<div class="container">
 
-<!-- TOP BILER -->
-<section>
-    <h2>Top biler</h2>
+    <div class="dashboard">
 
-    <div class="cars">
-        <div class="car-card">
-            <img src="images/AudiRS6.jpg" alt="Bil">
-            <h4>Audi RS6</h4>
-            <p>Fra 4.999 kr/md</p>
+        <!-- Antal udlejede biler -->
+        <a href="udlejedeBiler.html">
+            <button>
+        <div class="card">
+
+            <h2>Udlejede biler</h2>
+
+            <p class="big-number">128</p>
+
+            <p>Aktive abonnementer</p>
+
         </div>
+            </button>
+        </a>
 
-        <div class="car-card">
-            <img src="images/Mercedes%20AMG%20E63.jpg" alt="Bil">
-            <h4>Mercedes AMG E63</h4>
-            <p>Fra 5.299 kr/md</p>
-        </div>
+        <!-- Samlet indkomst -->
+        <a href="indkomst.html">
+            <button>
+        <div class="card">
 
-        <div class="car-card">
-            <img src="images/BMW%20M8.jpg" alt="Bil">
-            <h4>BMW M8</h4>
-            <p>Fra 3.499 kr/md</p>
+            <h2>Samlet indkomst</h2>
+
+            <p class="big-number">1.250.000 kr.</p>
+
+            <p>Omsætning dette år</p>
+
         </div>
+            </button>
+        </a>
+        
+
+        <!-- Mest populære bil -->
+        <a href="MestPopulæreBiler.html">
+        <button>
+        <div class="card">
+
+            <h2>Mest populære biler</h2>
+
+            <p class="big-number">Peugeot 208</p>
+
+            <p>42 aktive lejeaftaler</p>
+
+        </div>
+        </button>
+        </a>
+
+        <!-- Kunder -->
+        <a href="kunder.html">
+            <button>
+        <div class="card">
+
+            <h2>Kunder</h2>
+
+            <p class="big-number">312</p>
+
+            <p>Registrerede kunder i år</p>
+
+        </div>
+            </button>
+        </a>
+
     </div>
 
-    <a href="BilBibliotek.html" class="btn">Se flere</a>
-</section>
+    <!-- Dataregistrering -->
+    <div class="card" style="margin-top: 30px;">
 
-<!-- KONTAKT + FAQ -->
-<section>
-    <h2>Kontakt & FAQ</h2>
-    <p>Email: kontakt@kwbruun.dk</p>
-    <p>Telefon: 12 34 56 78</p>
+        <h2>Seneste dataregistreringer</h2>
 
-    <a href="faq.html" class="btn">Gå til FAQ</a>
-</section>
+        <table>
 
-<!-- FOOTER -->
+            <tr>
+                <th>Kunde</th>
+                <th>Bil</th>
+                <th>Afhentningssted</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Mads Jensen</td>
+                <td>Citroën C3</td>
+                <td>København</td>
+                <td>Aktiv</td>
+            </tr>
+
+            <tr>
+                <td>Emma Nielsen</td>
+                <td>DS4</td>
+                <td>Odense</td>
+                <td>Afventer</td>
+            </tr>
+
+            <tr>
+                <td>Lucas Hansen</td>
+                <td>Peugeot 208</td>
+                <td>Aarhus</td>
+                <td>Aktiv</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- Skader -->
+    <div class="card" style="margin-top: 30px;">
+
+        <h2>Registrerede skader</h2>
+
+        <table>
+
+            <tr>
+                <th>Bil</th>
+                <th>Skade</th>
+                <th>Pris</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Peugeot 208</td>
+                <td>Ridset alufælg</td>
+                <td>400 kr.</td>
+                <td>Ikke repareret</td>
+            </tr>
+
+            <tr>
+                <td>DS7</td>
+                <td>Ny forrude</td>
+                <td>3000 kr.</td>
+                <td>Under behandling</td>
+            </tr>
+
+            <tr>
+                <td>Citroën C4</td>
+                <td>Lakskade</td>
+                <td>1500 kr.</td>
+                <td>Færdig</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- Statistik -->
+    <div class="card" style="margin-top: 30px;">
+
+        <h2>Kundestatistik</h2>
+
+        <table>
+
+            <tr>
+                <th>Måned</th>
+                <th>Nye kunder</th>
+            </tr>
+
+            <tr>
+                <td>Januar</td>
+                <td>24</td>
+            </tr>
+
+            <tr>
+                <td>Februar</td>
+                <td>31</td>
+            </tr>
+
+            <tr>
+                <td>Marts</td>
+                <td>29</td>
+            </tr>
+
+            <tr>
+                <td>April</td>
+                <td>41</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
 <footer>
-    <p>© 2026 K.W.BRUUN</p>
+
+    <p>Bilabonnement.dk - Internt Administrationssystem</p>
+
 </footer>
 
 </body>
