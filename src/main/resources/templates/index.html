@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>K.W.BRUUN - Forside</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" th:href="@{/style.css}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
@@ -17,15 +17,15 @@
     <div class="logo">K.W.BRUUN</div>
 
     <nav>
-        <a href="index.html">Forside</a>
-        <a href="BilBibliotek.html">Biler</a>
-        <a href="faq.html">FAQ</a>
-        <a href="om%20os.html">Om os</a>
+            <a th:href="@{/}">Forside</a>
+            <a th:href="@{/cars}">Biler</a>
+            <a th:href="@{/faq}">FAQ</a>
+            <a th:href="@{/om-os}">Om os</a>
     </nav>
 
     <div class="right-section">
         <input type="text" placeholder="Søg..." class="search-box">
-        <a href="login.html">
+        <a th:href="@{/login}">
             <button class="login-btn">Login</button>
         </a>
     </div>
@@ -33,11 +33,8 @@
 
 <!-- OM OS PREVIEW -->
 <section>
-    <h2>Om os</h2>
-    <p>
-        Hos K.W.BRUUN tilbyder vi fleksible bilabonnementer, så du nemt kan få adgang til din drømmebil uden besvær.
-    </p>
-    <a href="om%20os.html" class="btn">Læs mere</a>
+    <h2>Opret lejeaftale</h2>
+    <a th:href="@{lejeaftale}" class="btn">opret</a>
 </section>
 
 <!-- TOP BILER -->
@@ -64,7 +61,7 @@
         </div>
     </div>
 
-    <a href="BilBibliotek.html" class="btn">Se flere</a>
+    <a th:href="@{cars}" class="btn">Se flere</a>
 </section>
 
 <!-- KONTAKT + FAQ -->
@@ -73,7 +70,7 @@
     <p>Email: kontakt@kwbruun.dk</p>
     <p>Telefon: 12 34 56 78</p>
 
-    <a href="faq.html" class="btn">Gå til FAQ</a>
+    <a th:href="@{faq}" class="btn">Gå til FAQ</a>
 </section>
 
 <!-- FOOTER -->

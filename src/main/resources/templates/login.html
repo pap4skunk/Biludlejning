@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>K.W.BRUUN - Login</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" th:href="@{/style.css}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
@@ -15,22 +15,19 @@
   <div class="logo">K.W.BRUUN</div>
 
   <nav>
-    <a href="index.html">Forside</a>
-    <a href="BilBibliotek.html">Biler</a>
-    <a href="faq.html">FAQ</a>
-    <a href="om%20os.html">Om os</a>
+    <a th:href="@{/}">Forside</a>
+    <a th:href="@{/cars}">Biler</a>
+    <a th:href="@{/faq}">FAQ</a>
+    <a th:href="@{/om-os}">Om os</a>
   </nav>
 
   <div class="right-section">
     <input type="text" placeholder="Søg..." class="search-box">
-    <a href="login.html">
+    <a th:href="@{/login}">
       <button class="login-btn">Login</button>
     </a>
   </div>
 </header>
-
-<!-- HEADER -->
-<div th:replace="fragments/header :: header"></div>
 
 <!-- LOGIN -->
 <div class="login-container">
