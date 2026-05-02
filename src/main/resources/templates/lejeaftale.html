@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"
-xmlns:th="http://www.thymeleaf.org">
+<html lang="da" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
+    <title>Opret Lejeaftale</title>
     <link rel="stylesheet" th:href="@{/style.css}">
-    <title>Title</title>
 </head>
+
 <body>
 
 <header>
@@ -19,12 +20,55 @@ xmlns:th="http://www.thymeleaf.org">
     </nav>
 
     <div class="right-section">
-        <input type="text" placeholder="Søg..." class="search-box">
         <a th:href="@{/login}">
             <button class="login-btn">Login</button>
         </a>
     </div>
 </header>
+
+<h1>Opret Lejeaftale</h1>
+
+<form th:action="@{/createRental}" method="post">
+
+    <!-- BIL -->
+    <label>Vælg bil:</label>
+    <select name="carId" required>
+        <option value="">-- vælg bil --</option>
+        <option th:each="car : ${cars}"
+                th:value="${car.carId}"
+                th:text="${car.brand + ' ' + car.model + ' (' + car.status + ')'}">
+        </option>
+    </select>
+
+    <br><br>
+
+    <!-- KUNDE -->
+    <label>Vælg kunde:</label>
+    <select name="customerId" required>
+        <option value="">-- vælg kunde --</option>
+        <option th:each="customer : ${customers}"
+                th:value="${customer.id}"
+                th:text="${customer.firstName + ' ' + customer.lastName + ' - ' + customer.email}">
+        </option>
+    </select>
+
+    <br><br>
+
+    <!-- DATOER -->
+    <label>Start dato:</label>
+    <input type="date" name="startDate" required>
+
+    <br><br>
+
+    <label>Slut dato:</label>
+    <input type="date" name="endDate" required>
+
+    <br><br>
+
+    <!-- SUBMIT -->
+    <button type="submit">Opret lejeaftale</button>
+
+</form>
 
 </body>
 </html>

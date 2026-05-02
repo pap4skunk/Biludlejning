@@ -1,14 +1,22 @@
 package org.example.biludlejning.model;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Car {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int carId;
+
     private String vinNumber;
     private String licensePlate;
     private String brand;
     private String model;
     private String status;
 
+    public Car() {
+    }
 
     public int getCarId() {
         return carId;
