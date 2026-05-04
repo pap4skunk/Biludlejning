@@ -1,5 +1,7 @@
 package Models;
 
+import org.springframework.web.bind.annotation.ModelAttribute;
+
 
 public class Car {
     private int bil_id;
